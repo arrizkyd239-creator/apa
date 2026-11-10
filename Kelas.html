@@ -1,0 +1,417 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Website Kelas Kami</title>
+
+<style>
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 75px;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #eef6ff;
+    color: #17365d;
+}
+
+/* HEADER */
+header {
+    background: linear-gradient(135deg,#064b91,#55adff);
+    color: white;
+    text-align: center;
+    padding: 65px 15px;
+    animation: muncul 1.5s ease;
+}
+
+header h1 {
+    font-size: 35px;
+}
+
+@keyframes muncul {
+    from {
+        opacity: 0;
+        transform: translateY(-35px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* NAVIGASI */
+nav {
+    background: #064b91;
+    padding: 14px;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 3px 10px #9bbfe0;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 8px;
+    font-weight: bold;
+    display: inline-block;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #b9ddff;
+    transform: translateY(-3px);
+}
+
+nav a:active {
+    transform: scale(.92);
+}
+
+/* SECTION */
+section {
+    max-width: 1100px;
+    margin: auto;
+    padding: 40px 15px;
+    scroll-margin-top: 75px;
+}
+
+h2 {
+    text-align: center;
+    color: #0755a5;
+    margin-bottom: 25px;
+}
+
+/* KOTAK */
+.card {
+    background: white;
+    border: 2px solid #c5e1ff;
+    border-radius: 16px;
+    padding: 16px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0,70,140,.12);
+    transition: .3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px #a9d3fa;
+}
+
+/* GRID */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(145px,1fr));
+    gap: 18px;
+}
+
+/* SISWA */
+.siswa-card {
+    background: white;
+    border: 2px solid #b9dcff;
+    border-radius: 16px;
+    padding: 14px;
+    text-align: center;
+    box-shadow: 0 4px 12px #c9e2fa;
+    transition: .3s;
+}
+
+.siswa-card:hover {
+    transform: translateY(-5px);
+}
+
+.siswa-card img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 10px;
+    background: #dcecff;
+    border: 2px solid #d2e9ff;
+}
+
+.siswa-card h3 {
+    font-size: 15px;
+    margin: 12px 0 8px;
+}
+
+.nomor {
+    display: inline-block;
+    background: #0755a5;
+    color: white;
+    border-radius: 20px;
+    padding: 5px 15px;
+    font-size: 12px;
+}
+
+/* WALI KELAS */
+.wali img {
+    width: 180px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+/* STRUKTUR */
+.struktur {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(170px,1fr));
+    gap: 15px;
+}
+
+/* GALERI */
+.galeri img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 10px;
+    background: #dcecff;
+}
+
+/* FOOTER */
+footer {
+    background: #064b91;
+    color: white;
+    text-align: center;
+    padding: 25px;
+}
+
+/* HP */
+@media(max-width:480px) {
+    header h1 {
+        font-size: 27px;
+    }
+
+    nav a {
+        font-size: 12px;
+        margin: 5px;
+    }
+
+    .grid {
+        grid-template-columns: repeat(2,minmax(0,1fr));
+        gap: 10px;
+    }
+}
+
+/* HORMATI PENGATURAN ANIMASI PERANGKAT */
+@media(prefers-reduced-motion:reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    * {
+        animation-duration: .01ms !important;
+        transition-duration: .01ms !important;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- PEMBUKA -->
+<header>
+    <h1>WELCOME TO 8.1</h1>
+    <h3>Website Kenangan Kelas</h3>
+</header>
+
+<!-- MENU -->
+<nav>
+    <a href="#tentang">Tentang</a>
+    <a href="#wali">Wali Kelas</a>
+    <a href="#struktur">Struktur</a>
+    <a href="#siswa">Siswa</a>
+    <a href="#galeri">Kenangan</a>
+</nav>
+
+<!-- TENTANG -->
+<section id="tentang">
+    <h2>TENTANG KELAS KAMI</h2>
+
+    <div class="card">
+        <h3>KELAS [NAMA KELAS]</h3>
+        <p>Selamat datang di website kelas kami!</p>
+        <p>Tempat berbagi cerita, persahabatan,
+        kebersamaan dan kenangan indah.</p>
+    </div>
+</section>
+
+<!-- WALI KELAS -->
+<section id="wali">
+    <h2>WALI KELAS KAMI</h2>
+
+    <div class="card wali">
+        <img src="foto/wali-kelas.jpg" alt="Wali Kelas">
+        <h3>Nama Wali Kelas</h3>
+        <p>Wali Kelas</p>
+    </div>
+</section>
+
+<!-- STRUKTUR -->
+<section id="struktur">
+    <h2>STRUKTUR ORGANISASI KELAS</h2>
+
+    <div class="struktur">
+
+        <div class="card">
+            <h3>Ketua Kelas</h3>
+            <p>Nama Ketua</p>
+        </div>
+
+        <div class="card">
+            <h3>Wakil Ketua</h3>
+            <p>Nama Wakil</p>
+        </div>
+
+        <div class="card">
+            <h3>Sekretaris 1</h3>
+            <p>Nama Sekretaris</p>
+        </div>
+
+        <div class="card">
+            <h3>Sekretaris 2</h3>
+            <p>Nama Sekretaris</p>
+        </div>
+
+        <div class="card">
+            <h3>Bendahara 1</h3>
+            <p>Nama Bendahara</p>
+        </div>
+
+        <div class="card">
+            <h3>Bendahara 2</h3>
+            <p>Nama Bendahara</p>
+        </div>
+
+    </div>
+</section>
+
+<!-- 42 SISWA -->
+<section id="siswa">
+    <h2>ANGGOTA KELAS (42 SISWA)</h2>
+
+    <div class="grid">
+
+<div class="siswa-card"><img src="foto/siswa1.jpg" alt="Siswa 1"><h3>Nama Siswa 1</h3><span class="nomor">Siswa 01</span></div>
+<div class="siswa-card"><img src="foto/siswa2.jpg" alt="Siswa 2"><h3>Nama Siswa 2</h3><span class="nomor">Siswa 02</span></div>
+<div class="siswa-card"><img src="foto/siswa3.jpg" alt="Siswa 3"><h3>Nama Siswa 3</h3><span class="nomor">Siswa 03</span></div>
+<div class="siswa-card"><img src="foto/siswa4.jpg" alt="Siswa 4"><h3>Nama Siswa 4</h3><span class="nomor">Siswa 04</span></div>
+<div class="siswa-card"><img src="foto/siswa5.jpg" alt="Siswa 5"><h3>Nama Siswa 5</h3><span class="nomor">Siswa 05</span></div>
+<div class="siswa-card"><img src="foto/siswa6.jpg" alt="Siswa 6"><h3>Nama Siswa 6</h3><span class="nomor">Siswa 06</span></div>
+<div class="siswa-card"><img src="foto/siswa7.jpg" alt="Siswa 7"><h3>Nama Siswa 7</h3><span class="nomor">Siswa 07</span></div>
+<div class="siswa-card"><img src="foto/siswa8.jpg" alt="Siswa 8"><h3>Nama Siswa 8</h3><span class="nomor">Siswa 08</span></div>
+<div class="siswa-card"><img src="foto/siswa9.jpg" alt="Siswa 9"><h3>Nama Siswa 9</h3><span class="nomor">Siswa 09</span></div>
+<div class="siswa-card"><img src="foto/siswa10.jpg" alt="Siswa 10"><h3>Nama Siswa 10</h3><span class="nomor">Siswa 10</span></div>
+<div class="siswa-card"><img src="foto/siswa11.jpg" alt="Siswa 11"><h3>Nama Siswa 11</h3><span class="nomor">Siswa 11</span></div>
+<div class="siswa-card"><img src="foto/siswa12.jpg" alt="Siswa 12"><h3>Nama Siswa 12</h3><span class="nomor">Siswa 12</span></div>
+<div class="siswa-card"><img src="foto/siswa13.jpg" alt="Siswa 13"><h3>Nama Siswa 13</h3><span class="nomor">Siswa 13</span></div>
+<div class="siswa-card"><img src="foto/siswa14.jpg" alt="Siswa 14"><h3>Nama Siswa 14</h3><span class="nomor">Siswa 14</span></div>
+<div class="siswa-card"><img src="foto/siswa15.jpg" alt="Siswa 15"><h3>Nama Siswa 15</h3><span class="nomor">Siswa 15</span></div>
+<div class="siswa-card"><img src="foto/siswa16.jpg" alt="Siswa 16"><h3>Nama Siswa 16</h3><span class="nomor">Siswa 16</span></div>
+<div class="siswa-card"><img src="foto/siswa17.jpg" alt="Siswa 17"><h3>Nama Siswa 17</h3><span class="nomor">Siswa 17</span></div>
+<div class="siswa-card"><img src="foto/siswa18.jpg" alt="Siswa 18"><h3>Nama Siswa 18</h3><span class="nomor">Siswa 18</span></div>
+<div class="siswa-card"><img src="foto5.jpg" alt=""><h3>KHEYNARA</h3><span class="nomor">ABSEN 19</span></div>
+<div class="siswa-card"><img src="foto/siswa20.jpg" alt="Siswa 20"><h3>Nama Siswa 20</h3><span class="nomor">Siswa 20</span></div>
+<div class="siswa-card"><img src="foto/siswa21.jpg" alt="Siswa 21"><h3>Nama Siswa 21</h3><span class="nomor">Siswa 21</span></div>
+<div class="siswa-card"><img src="foto/siswa22.jpg" alt="Siswa 22"><h3>Nama Siswa 22</h3><span class="nomor">Siswa 22</span></div>
+<div class="siswa-card"><img src="foto4.jpg" alt="Absen 23"><h3>MAULIDDIA</h3><span class="nomor">ABSEN 23</span></div>
+<div class="siswa-card"><img src="foto/siswa24.jpg" alt="Siswa 24"><h3>Nama Siswa 24</h3><span class="nomor">Siswa 24</span></div>
+<div class="siswa-card"><img src="foto/siswa25.jpg" alt="Siswa 25"><h3>Nama Siswa 25</h3><span class="nomor">Siswa 25</span></div>
+<div class="siswa-card"><img src="foto/siswa26.jpg" alt="Siswa 26"><h3>Nama Siswa 26</h3><span class="nomor">Siswa 26</span></div>
+<div class="siswa-card"><img src="foto/siswa27.jpg" alt="Siswa 27"><h3>Nama Siswa 27</h3><span class="nomor">Siswa 27</span></div>
+<div class="siswa-card"><img src="foto/siswa28.jpg" alt="Siswa 28"><h3>Nama Siswa 28</h3><span class="nomor">Siswa 28</span></div>
+<div class="siswa-card"><img src="foto/siswa29.jpg" alt="Siswa 29"><h3>Nama Siswa 29</h3><span class="nomor">Siswa 29</span></div>
+<div class="siswa-card"><img src="foto/siswa30.jpg" alt="Siswa 30"><h3>Nama Siswa 30</h3><span class="nomor">Siswa 30</span></div>
+<div class="siswa-card"><img src="foto siswa.jpg" alt="Siswa 31"><h3>Nama Siswa 31</h3><span class="nomor">Siswa 31</span></div>
+<div class="siswa-card"><img src="foto/siswa32.jpg" alt="Siswa 32"><h3>Nama Siswa 32</h3><span class="nomor">Siswa 32</span></div>
+<div class="siswa-card"><img src="foto/siswa33.jpg" alt="Siswa 33"><h3>Nama Siswa 33</h3><span class="nomor">Siswa 33</span></div>
+<div class="siswa-card"><img src="foto9.jpg" alt="Siswa 34"><h3>ALYA</h3><span class="nomor">ABSEN 34</span></div>
+<div class="siswa-card"><img src="foto3.jpg" alt="Siswa 35"><h3>siswa 35</h3><span class="nomor">ABSEN 35</span></div>
+<div class="siswa-card"><img src="foto/siswa36.jpg" alt="Siswa 36"><h3>Nama Siswa 36</h3><span class="nomor">Siswa 36</span></div>
+<div class="siswa-card"><img src="foto/siswa37.jpg" alt="Siswa 37"><h3>Nama Siswa 37</h3><span class="nomor">Siswa 37</span></div>
+<div class="siswa-card"><img src="foto6.jpg" alt="Siswa 38"><h3>SALSABILA</h3><span class="nomor">ABSEN 38</span></div>
+<div class="siswa-card"><img src="foto/siswa39.jpg" alt="Siswa 39"><h3>Nama Siswa 39</h3><span class="nomor">Siswa 39</span></div>
+<div class="siswa-card"><img src="foto/siswa40.jpg" alt="Siswa 40"><h3>Nama Siswa 40</h3><span class="nomor">Siswa 40</span></div>
+<div class="siswa-card"><img src="foto/siswa41.jpg" alt="Siswa 41"><h3>Nama Siswa 41</h3><span class="nomor">Siswa 41</span></div>
+<div class="siswa-card"><img src="foto/siswa42.jpg" alt="Siswa 42"><h3>Nama Siswa 42</h3><span class="nomor">Siswa 42</span></div>
+
+    </div>
+</section>
+
+<!-- 6 KENANGAN -->
+<section id="galeri">
+    <h2>GALERI KENANGAN KELAS</h2>
+
+    <div class="grid galeri">
+
+        <div class="card">
+            <img src="foto7.jpg" alt="Kenangan 1">
+            <h3>Kenangan 1</h3>
+        </div>
+
+        <div class="card">
+            <img src="foto8.jpg" alt="Kenangan 2">
+            <h3>Kenangan 2</h3>
+        </div>
+
+        <div class="card">
+            <img src="foto10.jpg" alt="Kenangan 3">
+            <h3>Kenangan 3</h3>
+        </div>
+
+        <div class="card">
+            <img src="foto/kenangan4.jpg" alt="Kenangan 4">
+            <h3>Kenangan 4</h3>
+        </div>
+
+        <div class="card">
+            <img src="foto/kenangan5.jpg" alt="Kenangan 5">
+            <h3>Kenangan 5</h3>
+        </div>
+
+        <div class="card">
+            <img src="foto/kenangan6.jpg" alt="Kenangan 6">
+            <h3>Kenangan 6</h3>
+        </div>
+
+    </div>
+</section>
+
+<footer>
+    <h3>OUR CLASS, OUR STORY</h3>
+    <p>© 2026 Website Kelas Kami</p>
+</footer>
+
+<!-- JAVASCRIPT SMOOTH SCROLL -->
+<script>
+document.querySelectorAll('nav a').forEach(link => {
+
+    link.addEventListener('click', function(e) {
+
+        const tujuan = document.querySelector(
+            this.getAttribute('href')
+        );
+
+        if (tujuan) {
+            e.preventDefault();
+
+            tujuan.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
+        }
+
+    });
+
+});
+</script>
+
+</body>
+</html>
